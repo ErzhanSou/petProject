@@ -1,0 +1,26 @@
+Given https://www.saucedemo.com/
+When user logs in with correct username and correct password
+Verify user was redirected to productPage
+Then user clicks 'add to cart button' of the first item Sauce Labs Backpack
+Verify 'Remove' button is appears
+Verify index on cart button is 1
+Then user clicks on cart button
+Verify user was redirected to cartPage
+Verify user sees item Sauce Labs Backpack in cart
+Verify checkout button is displayed
+Then user clicks 'Checkout' button
+Verify user was redirected to InformationPage
+Then user clicks 'Continue' button
+Verify user sees error message 'Error: First Name is required'
+Then user enters first name, last name, zip code
+Then user clicks 'Continue' button
+Verify user was redirected to OverviewPage
+Verify user sees total price
+Then user clicks Finish button
+Verify user was redirected to CompletePage
+Verify user sees message "Thank you for your order!"
+Verify 'Back Home' button is displayed
+Then user clicks 'Back Home' button
+Verify user was redirected to ProductPage
+
+

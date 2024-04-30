@@ -1,0 +1,16 @@
+Bug ticket: User not able to enter lastname
+Description: When user on information page enters first name on firstNameInputField
+and last name on LastNameInputField, user was redirected to first name input field and only 1 letter is
+appears on firstNameInputField.
+
+Given product Page on saucedemo.com
+When user clicks on add to cart button
+Then user clicks on cart button
+Verify user was redirected to cart Page
+Verify user sees product on cart Page
+Then user clicks checkout button
+Then user enters First name
+Then user enters last name
+
+Expected result: User able to enter first name, last name and zip code.
+Actual result: User able to enter first name and zip code, but lastNameInputField works incorrect

@@ -1,0 +1,4 @@
+Given Login Page https://www.saucedemo.com/
+When user enters valid username and invalid password
+Then user clicks login button
+Verify that user sees error message

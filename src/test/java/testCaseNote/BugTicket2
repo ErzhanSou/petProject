@@ -1,0 +1,10 @@
+Bug Ticket: Remove button is not clickable after adding product to cart
+Description: When user clicks add to cart button on the product page of saucedemo.com,
+ the Remove button is appears
+Given Product Page on sauce_demo.com
+When user logs in with problem_user name, and valid password
+Then user clicks add to cart button
+Then remove button is appears
+Then user clicks on remove button, but it isn’t clickable
+Actual result: user able to add to cart item but cannot remove it by clicking remove button
+Expected: user able to add to cart item and can remove it by clicking remove button

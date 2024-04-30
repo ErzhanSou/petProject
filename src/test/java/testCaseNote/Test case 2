@@ -1,0 +1,7 @@
+Given product Page on saucedemo.com
+When user clicks on add to cart button
+Then user clicks on cart button
+Verify user was redirected to cart Page
+Verify user sees product on cart Page
+Then user clicks on remove button
+Verify that the product was removed
