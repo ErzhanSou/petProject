@@ -22,17 +22,17 @@ public class TestClass {
     public void test1() {
 
         // login page
-        Driver.getDriver().get(Config.getProperty("sauceDemo"));
-        loginPage.userNameInputField.sendKeys(Config.getProperty("sauceUser"));
-        loginPage.passwordInputField.sendKeys(Config.getProperty("saucePassword"));
-        loginPage.loginButton.click();
+        Driver.getDriver().get(Config.getProperty("sauceDemo")); // To navigate to www.sauceDemo.com
+        loginPage.userNameInputField.sendKeys(Config.getProperty("sauceUser")); // Enters userName
+        loginPage.passwordInputField.sendKeys(Config.getProperty("saucePassword")); // Enters userPassword
+        loginPage.loginButton.click(); // Clicks on login button
 
         // product page
-        Assertions.assertEquals(Driver.getDriver().getCurrentUrl(), Config.getProperty("productPageURL"));
-        productPage.addToCartBtnSauceLabsBackpack.click();
-        Assertions.assertTrue(productPage.removeBtnSauceLabsBackpack.isDisplayed());
-        Assertions.assertEquals("1", commonPage.numOfItemsInCart.getText());
-        commonPage.cartButton.click();
+        Assertions.assertEquals(Driver.getDriver().getCurrentUrl(), Config.getProperty("productPageURL")); // Checks that user was redirected to Product Page
+        productPage.addToCartBtnSauceLabsBackpack.click(); // Clicking add to cart button on SauceLabsBackpack item
+        Assertions.assertTrue(productPage.removeBtnSauceLabsBackpack.isDisplayed()); // Checking is that remove button is displayed
+        Assertions.assertEquals("1", commonPage.numOfItemsInCart.getText()); // Checking is that number of item's is increased by 1
+        commonPage.cartButton.click(); // Clicks on cart button
 
         // cart page
         Assertions.assertEquals(Driver.getDriver().getCurrentUrl(), Config.getProperty("cartPageURL"));
