@@ -20,4 +20,6 @@ public class LoginPage {
     @FindBy(id = "login-button")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//h3[@data-test='error']")
+    public WebElement errorMessage;
 }
